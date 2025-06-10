@@ -17,7 +17,7 @@ import Filters from "./Filters";
 // Custom Views
 import ListView from "./Views/ListView";
 
-const Home2 = () => {
+const Explore = () => {
   document.getElementById("root").addEventListener("reload", function (event) {
     event.preventDefault(); // Prevent the default form submission behavior
     // Your custom form submission logic here
@@ -92,4 +92,4 @@ const Home2 = () => {
   );
 };
 
-export default Home2;
+export default Explore;

@@ -134,13 +134,13 @@ export default function Header() {
         </div>
       </Drawer>
 
-      <header className="text-white p-4 bg-blue-950 sticky top-0 z-40">
+      <header className="text-white p-4 bg-indigo-950 sticky top-0 z-40">
         <div className="flex items-center justify-around">
           <div className="text-xl font-bold">
             {urlparams !== "" ? (
-              <Link to={"/" + urlparams}>TaRGET Portal</Link>
+              <Link to={"/" + urlparams}>TaRGET-II Data Portal</Link>
             ) : (
-              <Link to="/">TaRGET Portal</Link>
+              <Link to="/">TaRGET-II Data Portal</Link>
             )}
           </div>
           <div className="sm:hidden">
@@ -178,10 +178,10 @@ export default function Header() {
               Methods
             </Link>
             <Link
-              to="/summary"
+              to="/explore"
               className="text-white hover:underline hover:underline-offset-4 hover:decoration-rose-500 hover:decoration-2"
             >
-              Summary
+              Explore
             </Link>
             <a
               href="https://epigenomegateway.wustl.edu/browser2022/?genome=mm10&hub=https://wangcluster.wustl.edu/~pkuntala/targethub.json"

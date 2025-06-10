@@ -9,6 +9,38 @@ export default function Summary() {
 
   return (
     <div className="container mx-auto">
+      {/* Introduction */}
+      <div class="bg-indigo-900 text-white px-6 py-16 md:py-24 text-center relative">
+        <div class="max-w-3xl mx-auto">
+          <h1 class="text-4xl md:text-5xl font-bold mb-4">
+            TaRGET-II Data Portal
+          </h1>
+          <p class="text-lg md:text-xl mb-8">
+            Discover insights, Visualize trends from mouse exposomes
+          </p>
+        </div>
+
+        <p class="max-w-full px-6 text-center text-lg md:text-xl mb-4">
+          The Toxicant Exposures and Responses by Genomic and Epigenomic
+          Regulators of Transcription (TaRGET) Program was establised to address
+          the role of the environment in disease susceptibility as a function of
+          changes to the epigenome. The goals are to enhance our understanding
+          of the relationship between exposure-induced perturbations of
+          epigenetic marks in target versus surrogate tissues; determine
+          conditions where these studies will be valid; and aid in the
+          interpretation of the results of such studies.
+        </p>
+
+        <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2">
+          <button
+            class="bg-white text-blue-700 font-semibold px-6 py-3 rounded-full shadow-lg hover:bg-gray-100 transition"
+            onClick={() => handleClick("/explore")}
+          >
+            Browse All Data
+          </button>
+        </div>
+      </div>
+
       {/* Summary Plots */}
       <div className="p-5 mb-5">
         <SummaryPlots />
@@ -66,26 +98,32 @@ export default function Summary() {
               <td className="border border-slate-700 px-4 py-1">ATAC</td>
               <td
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
-                onClick={() => handleClick('/?Assay=["ATAC"]')}
+                onClick={() => handleClick('/explore?Assay=["ATAC"]')}
               >
                 638
               </td>
               <td
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
-                onClick={() => handleClick('/?Assay=["ATAC"]&Tissue=["Blood"]')}
+                onClick={() =>
+                  handleClick('/explore?Assay=["ATAC"]&Tissue=["Blood"]')
+                }
               >
                 201
               </td>
               <td
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
-                onClick={() => handleClick('/?Assay=["ATAC"]&Tissue=["Brain"]')}
+                onClick={() =>
+                  handleClick('/explore?Assay=["ATAC"]&Tissue=["Brain"]')
+                }
               >
                 22
               </td>
               <td className="border border-slate-700 px-4 py-1 "></td>
               <td
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
-                onClick={() => handleClick('/?Assay=["ATAC"]&Tissue=["Liver"]')}
+                onClick={() =>
+                  handleClick('/explore?Assay=["ATAC"]&Tissue=["Liver"]')
+                }
               >
                 415
               </td>
@@ -96,37 +134,47 @@ export default function Summary() {
               <td className="border border-slate-700 px-4 py-1">RNA </td>
               <td
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
-                onClick={() => handleClick('/?Assay=["RNA"]')}
+                onClick={() => handleClick('/explore?Assay=["RNA"]')}
               >
                 998
               </td>
               <td
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
-                onClick={() => handleClick('/?Assay=["RNA"]&Tissue=["Blood"]')}
+                onClick={() =>
+                  handleClick('/explore?Assay=["RNA"]&Tissue=["Blood"]')
+                }
               >
                 401
               </td>
               <td
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
-                onClick={() => handleClick('/?Assay=["RNA"]&Tissue=["Brain"]')}
+                onClick={() =>
+                  handleClick('/explore?Assay=["RNA"]&Tissue=["Brain"]')
+                }
               >
                 34
               </td>
               <td
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
-                onClick={() => handleClick('/?Assay=["RNA"]&Tissue=["Heart"]')}
+                onClick={() =>
+                  handleClick('/explore?Assay=["RNA"]&Tissue=["Heart"]')
+                }
               >
                 24
               </td>
               <td
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
-                onClick={() => handleClick('/?Assay=["RNA"]&Tissue=["Liver"]')}
+                onClick={() =>
+                  handleClick('/explore?Assay=["RNA"]&Tissue=["Liver"]')
+                }
               >
                 492
               </td>
               <td
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
-                onClick={() => handleClick('/?Assay=["RNA"]&Tissue=["Lung"]')}
+                onClick={() =>
+                  handleClick('/explore?Assay=["RNA"]&Tissue=["Lung"]')
+                }
               >
                 47
               </td>
@@ -136,13 +184,15 @@ export default function Summary() {
               <td className="border border-slate-700 px-4 py-1">RRBS</td>
               <td
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
-                onClick={() => handleClick('/?Assay=["RRBS"]')}
+                onClick={() => handleClick('/explore?Assay=["RRBS"]')}
               >
                 71
               </td>
               <td
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
-                onClick={() => handleClick('/?Assay=["RRBS"]&Tissue=["Blood"]')}
+                onClick={() =>
+                  handleClick('/explore?Assay=["RRBS"]&Tissue=["Blood"]')
+                }
               >
                 36
               </td>
@@ -150,7 +200,9 @@ export default function Summary() {
               <td className="border border-slate-700 px-4 py-1"></td>
               <td
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
-                onClick={() => handleClick('/?Assay=["RRBS"]&Tissue=["Liver"]')}
+                onClick={() =>
+                  handleClick('/explore?Assay=["RRBS"]&Tissue=["Liver"]')
+                }
               >
                 35
               </td>
@@ -161,33 +213,41 @@ export default function Summary() {
               <td className="border border-slate-700 px-4 py-1">WGBS</td>
               <td
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
-                onClick={() => handleClick('/?Assay=["WGBS"]')}
+                onClick={() => handleClick('/explore?Assay=["WGBS"]')}
               >
                 449
               </td>
               <td
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
-                onClick={() => handleClick('/?Assay=["WGBS"]&Tissue=["Blood"]')}
+                onClick={() =>
+                  handleClick('/explore?Assay=["WGBS"]&Tissue=["Blood"]')
+                }
               >
                 163
               </td>
               <td
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
-                onClick={() => handleClick('/?Assay=["WGBS"]&Tissue=["Brain"]')}
+                onClick={() =>
+                  handleClick('/explore?Assay=["WGBS"]&Tissue=["Brain"]')
+                }
               >
                 64
               </td>
               <td className="border border-slate-700 px-4 py-1"></td>
               <td
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
-                onClick={() => handleClick('/?Assay=["WGBS"]&Tissue=["Liver"]')}
+                onClick={() =>
+                  handleClick('/explore?Assay=["WGBS"]&Tissue=["Liver"]')
+                }
               >
                 200
               </td>
               <td className="border border-slate-700 px-4 py-1"></td>
               <td
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
-                onClick={() => handleClick('/?Assay=["WGBS"]&Tissue=["Skin"]')}
+                onClick={() =>
+                  handleClick('/explore?Assay=["WGBS"]&Tissue=["Skin"]')
+                }
               >
                 22
               </td>
@@ -196,7 +256,7 @@ export default function Summary() {
               <td className="border border-slate-700 px-4 py-1">ChIP</td>
               <td
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
-                onClick={() => handleClick('/?Assay=["ChIP"]')}
+                onClick={() => handleClick('/explore?Assay=["ChIP"]')}
               >
                 627
               </td>
@@ -205,7 +265,9 @@ export default function Summary() {
               <td className="border border-slate-700 px-4 py-1"></td>
               <td
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
-                onClick={() => handleClick('/?Assay=["ChIP"]&Tissue=["Liver"]')}
+                onClick={() =>
+                  handleClick('/explore?Assay=["ChIP"]&Tissue=["Liver"]')
+                }
               >
                 627
               </td>
@@ -216,14 +278,14 @@ export default function Summary() {
               <td className="border border-slate-700 px-4 py-1">Microarray</td>
               <td
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
-                onClick={() => handleClick('/?Assay=["microarray"]')}
+                onClick={() => handleClick('/explore?Assay=["microarray"]')}
               >
                 308
               </td>
               <td
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
-                  handleClick('/?Assay=["microarray"]&Tissue=["Blood"]')
+                  handleClick('/explore?Assay=["microarray"]&Tissue=["Blood"]')
                 }
               >
                 128
@@ -231,7 +293,7 @@ export default function Summary() {
               <td
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
-                  handleClick('/?Assay=["microarray"]&Tissue=["Cortex"]')
+                  handleClick('/explore?Assay=["microarray"]&Tissue=["Cortex"]')
                 }
               >
                 180
@@ -245,7 +307,7 @@ export default function Summary() {
         </table>
       </div>
 
-      {/* Table with data for each tissue. */}
+      {/* Table with data for each age. */}
       <p className="pb-2">
         Age Dataset Matrix
         <p className="text-sm">
@@ -283,20 +345,24 @@ export default function Summary() {
               <td className="border border-slate-700 px-4 py-1">ATAC</td>
               <td
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
-                onClick={() => handleClick('/?Assay=["ATAC"]')}
+                onClick={() => handleClick('/explore?Assay=["ATAC"]')}
               >
                 638
               </td>
               <td
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
-                onClick={() => handleClick('/?Assay=["ATAC"]&Age=["3 weeks"]')}
+                onClick={() =>
+                  handleClick('/explore?Assay=["ATAC"]&Age=["3 weeks"]')
+                }
               >
                 233
               </td>
               <td className="border border-slate-700 px-4 py-1"></td>
               <td
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
-                onClick={() => handleClick('/?Assay=["ATAC"]&Age=["20 weeks"]')}
+                onClick={() =>
+                  handleClick('/explore?Assay=["ATAC"]&Age=["20 weeks"]')
+                }
               >
                 405
               </td>
@@ -306,26 +372,32 @@ export default function Summary() {
               <td className="border border-slate-700 px-4 py-1">RNA</td>
               <td
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
-                onClick={() => handleClick('/?Assay=["RNA"]')}
+                onClick={() => handleClick('/explore?Assay=["RNA"]')}
               >
                 998
               </td>
               <td
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
-                onClick={() => handleClick('/?Assay=["RNA"]&Age=["3 weeks"]')}
+                onClick={() =>
+                  handleClick('/explore?Assay=["RNA"]&Age=["3 weeks"]')
+                }
               >
                 453
               </td>
               <td className="border border-slate-700 px-4 py-1"></td>
               <td
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
-                onClick={() => handleClick('/?Assay=["RNA"]&Age=["20 weeks"]')}
+                onClick={() =>
+                  handleClick('/explore?Assay=["RNA"]&Age=["20 weeks"]')
+                }
               >
                 450
               </td>
               <td
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
-                onClick={() => handleClick('/?Assay=["RNA"]&Age=["40 weeks"]')}
+                onClick={() =>
+                  handleClick('/explore?Assay=["RNA"]&Age=["40 weeks"]')
+                }
               >
                 95
               </td>
@@ -334,67 +406,79 @@ export default function Summary() {
               <td className="border border-slate-700 px-4 py-1">RRBS</td>
               <td
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
-                onClick={() => handleClick('/?Assay=["RRBS"]')}
+                onClick={() => handleClick('/explore?Assay=["RRBS"]')}
               >
                 71
               </td>
+              <td className="border border-slate-700 px-4 py-1"></td>
               <td className="border border-slate-700 px-4 py-1"></td>
               <td
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
-                onClick={() => handleClick('/?Assay=["RRBS"]&Age=["5 weeks"]')}
+                onClick={() =>
+                  handleClick('/explore?Assay=["RRBS"]&Age=["20 weeks"]')
+                }
               >
                 71
               </td>
-              <td className="border border-slate-700 px-4 py-1"></td>
               <td className="border border-slate-700 px-4 py-1"></td>
             </tr>
             <tr className="">
               <td className="border border-slate-700 px-4 py-1">WGBS</td>
               <td
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
-                onClick={() => handleClick('/?Assay=["WGBS"]')}
+                onClick={() => handleClick('/explore?Assay=["WGBS"]')}
               >
                 449
               </td>
               <td className="border border-slate-700 px-4 py-1"></td>
+              <td className="border border-slate-700 px-4 py-1 "></td>
               <td
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
-                onClick={() => handleClick('/?Assay=["WGBS"]&Age=["5 weeks"]')}
+                onClick={() =>
+                  handleClick('/explore?Assay=["WGBS"]&Age=["20 weeks"]')
+                }
               >
                 449
               </td>
-              <td className="border border-slate-700 px-4 py-1"></td>
               <td className="border border-slate-700 px-4 py-1"></td>
             </tr>
             <tr className="">
               <td className="border border-slate-700 px-4 py-1">ChIP</td>
               <td
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
-                onClick={() => handleClick('/?Assay=["ChIP"]')}
+                onClick={() => handleClick('/explore?Assay=["ChIP"]')}
               >
                 627
               </td>
               <td
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
-                onClick={() => handleClick('/?Assay=["ChIP"]&Age=["3 weeks"]')}
+                onClick={() =>
+                  handleClick('/explore?Assay=["ChIP"]&Age=["3 weeks"]')
+                }
               >
                 33
               </td>
               <td
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
-                onClick={() => handleClick('/?Assay=["ChIP"]&Age=["5 weeks"]')}
+                onClick={() =>
+                  handleClick('/explore?Assay=["ChIP"]&Age=["5 weeks"]')
+                }
               >
                 35
               </td>
               <td
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
-                onClick={() => handleClick('/?Assay=["ChIP"]&Age=["20 weeks"]')}
+                onClick={() =>
+                  handleClick('/explore?Assay=["ChIP"]&Age=["20 weeks"]')
+                }
               >
                 526
               </td>
               <td
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
-                onClick={() => handleClick('/?Assay=["ChIP"]&Age=["40 weeks"]')}
+                onClick={() =>
+                  handleClick('/explore?Assay=["ChIP"]&Age=["40 weeks"]')
+                }
               >
                 33
               </td>
@@ -404,7 +488,7 @@ export default function Summary() {
               <td className="border border-slate-700 px-4 py-1">Microarray</td>
               <td
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
-                onClick={() => handleClick('/?Assay=["microarray"]')}
+                onClick={() => handleClick('/explore?Assay=["microarray"]')}
               >
                 308
               </td>
@@ -413,7 +497,7 @@ export default function Summary() {
               <td
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
-                  handleClick('/?Assay=["microarray"]&Age=["20 weeks"]')
+                  handleClick('/explore?Assay=["microarray"]&Age=["20 weeks"]')
                 }
               >
                 58
@@ -421,7 +505,7 @@ export default function Summary() {
               <td
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
-                  handleClick('/?Assay=["microarray"]&Age=["40 weeks"]')
+                  handleClick('/explore?Assay=["microarray"]&Age=["40 weeks"]')
                 }
               >
                 250
@@ -494,7 +578,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Assay=["microarray"]&Exposure=["Control"]&Tissue=["Blood"]&Age=["40 weeks"]&Sex=["Female"]'
+                    '/explore?Assay=["microarray"]&Exposure=["Control"]&Tissue=["Blood"]&Age=["40 weeks"]&Sex=["Female"]'
                   )
                 }
               >
@@ -504,7 +588,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Assay=["microarray"]&Exposure=["DEHP"]&Tissue=["Blood"]&Age=["40 weeks"]&Sex=["Female"]'
+                    '/explore?Assay=["microarray"]&Exposure=["DEHP"]&Tissue=["Blood"]&Age=["40 weeks"]&Sex=["Female"]'
                   )
                 }
               >
@@ -514,7 +598,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Assay=["microarray"]&Exposure=["Lead"]&Tissue=["Blood"]&Age=["40 weeks"]&Sex=["Female"]'
+                    '/explore?Assay=["microarray"]&Exposure=["Lead"]&Tissue=["Blood"]&Age=["40 weeks"]&Sex=["Female"]'
                   )
                 }
               >
@@ -527,7 +611,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Assay=["microarray"]&Exposure=["TCDD"]&Tissue=["Blood"]&Age=["40 weeks"]&Sex=["Female"]'
+                    '/explore?Assay=["microarray"]&Exposure=["TCDD"]&Tissue=["Blood"]&Age=["40 weeks"]&Sex=["Female"]'
                   )
                 }
               >
@@ -541,7 +625,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Assay=["microarray"]&Exposure=["Control"]&Tissue=["Blood"]&Age=["40 weeks"]&Sex=["Male"]'
+                    '/explore?Assay=["microarray"]&Exposure=["Control"]&Tissue=["Blood"]&Age=["40 weeks"]&Sex=["Male"]'
                   )
                 }
               >
@@ -551,7 +635,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Assay=["microarray"]&Exposure=["DEHP"]&Tissue=["Blood"]&Age=["40 weeks"]&Sex=["Male"]'
+                    '/explore?Assay=["microarray"]&Exposure=["DEHP"]&Tissue=["Blood"]&Age=["40 weeks"]&Sex=["Male"]'
                   )
                 }
               >
@@ -561,7 +645,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Assay=["microarray"]&Exposure=["Lead"]&Tissue=["Blood"]&Age=["40 weeks"]&Sex=["Male"]'
+                    '/explore?Assay=["microarray"]&Exposure=["Lead"]&Tissue=["Blood"]&Age=["40 weeks"]&Sex=["Male"]'
                   )
                 }
               >
@@ -574,7 +658,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Assay=["microarray"]&Exposure=["TCDD"]&Tissue=["Blood"]&Age=["40 weeks"]&Sex=["Male"]'
+                    '/explore?Assay=["microarray"]&Exposure=["TCDD"]&Tissue=["Blood"]&Age=["40 weeks"]&Sex=["Male"]'
                   )
                 }
               >
@@ -583,7 +667,7 @@ export default function Summary() {
               <td className="border border-slate-700 px-4 py-1"></td>
             </tr>
             <tr>
-              <td className="border border-slate-700 px-4 py-1" rowSpan={9}>
+              <td className="border border-slate-700 px-4 py-1" rowSpan={5}>
                 Cortex
               </td>
             </tr>
@@ -596,7 +680,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Assay=["microarray"]&Exposure=["Control"]&Tissue=["Cortex"]&Age=["40 weeks"]&Sex=["Female"]'
+                    '/explore?Assay=["microarray"]&Exposure=["Control"]&Tissue=["Cortex"]&Age=["40 weeks"]&Sex=["Female"]'
                   )
                 }
               >
@@ -608,7 +692,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Assay=["microarray"]&Exposure=["BPA10ug"]&Tissue=["Cortex"]&Age=["40 weeks"]&Sex=["Female"]'
+                    '/explore?Assay=["microarray"]&Exposure=["BPA10ug"]&Tissue=["Cortex"]&Age=["40 weeks"]&Sex=["Female"]'
                   )
                 }
               >
@@ -619,7 +703,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Assay=["microarray"]&Exposure=["TBT"]&Tissue=["Cortex"]&Age=["40 weeks"]&Sex=["Female"]'
+                    '/explore?Assay=["microarray"]&Exposure=["TBT"]&Tissue=["Cortex"]&Age=["40 weeks"]&Sex=["Female"]'
                   )
                 }
               >
@@ -629,7 +713,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Assay=["microarray"]&Exposure=["TCDD"]&Tissue=["Cortex"]&Age=["40 weeks"]&Sex=["Female"]'
+                    '/explore?Assay=["microarray"]&Exposure=["TCDD"]&Tissue=["Cortex"]&Age=["40 weeks"]&Sex=["Female"]'
                   )
                 }
               >
@@ -643,7 +727,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Assay=["microarray"]&Exposure=["Control"]&Tissue=["Cortex"]&Age=["40 weeks"]&Sex=["Male"]'
+                    '/explore?Assay=["microarray"]&Exposure=["Control"]&Tissue=["Cortex"]&Age=["40 weeks"]&Sex=["Male"]'
                   )
                 }
               >
@@ -655,7 +739,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Assay=["microarray"]&Exposure=["BPA10ug"]&Tissue=["Cortex"]&Age=["40 weeks"]&Sex=["Male"]'
+                    '/explore?Assay=["microarray"]&Exposure=["BPA10ug"]&Tissue=["Cortex"]&Age=["40 weeks"]&Sex=["Male"]'
                   )
                 }
               >
@@ -666,7 +750,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Assay=["microarray"]&Exposure=["TBT"]&Tissue=["Cortex"]&Age=["40 weeks"]&Sex=["Male"]'
+                    '/explore?Assay=["microarray"]&Exposure=["TBT"]&Tissue=["Cortex"]&Age=["40 weeks"]&Sex=["Male"]'
                   )
                 }
               >
@@ -676,7 +760,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Assay=["microarray"]&Exposure=["TCDD"]&Tissue=["Cortex"]&Age=["40 weeks"]&Sex=["Male"]'
+                    '/explore?Assay=["microarray"]&Exposure=["TCDD"]&Tissue=["Cortex"]&Age=["40 weeks"]&Sex=["Male"]'
                   )
                 }
               >
@@ -686,7 +770,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Assay=["microarray"]&Exposure=["BPA10mg"]&Tissue=["Cortex"]&Age=["40 weeks"]&Sex=["Male"]'
+                    '/explore?Assay=["microarray"]&Exposure=["BPA10mg"]&Tissue=["Cortex"]&Age=["40 weeks"]&Sex=["Male"]'
                   )
                 }
               >
@@ -702,7 +786,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Assay=["microarray"]&Exposure=["Control"]&Tissue=["Cortex"]&Age=["20 weeks"]&Sex=["Female"]'
+                    '/explore?Assay=["microarray"]&Exposure=["Control"]&Tissue=["Cortex"]&Age=["20 weeks"]&Sex=["Female"]'
                   )
                 }
               >
@@ -714,7 +798,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Assay=["microarray"]&Exposure=["BPA10ug"]&Tissue=["Cortex"]&Age=["20 weeks"]&Sex=["Female"]'
+                    '/explore?Assay=["microarray"]&Exposure=["BPA10ug"]&Tissue=["Cortex"]&Age=["20 weeks"]&Sex=["Female"]'
                   )
                 }
               >
@@ -727,7 +811,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Assay=["microarray"]&Exposure=["BPA10mg"]&Tissue=["Cortex"]&Age=["20 weeks"]&Sex=["Female"]'
+                    '/explore?Assay=["microarray"]&Exposure=["BPA10mg"]&Tissue=["Cortex"]&Age=["20 weeks"]&Sex=["Female"]'
                   )
                 }
               >
@@ -740,7 +824,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Assay=["microarray"]&Exposure=["Control"]&Tissue=["Cortex"]&Age=["20 weeks"]&Sex=["Male"]'
+                    '/explore?Assay=["microarray"]&Exposure=["Control"]&Tissue=["Cortex"]&Age=["20 weeks"]&Sex=["Male"]'
                   )
                 }
               >
@@ -752,7 +836,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Assay=["microarray"]&Exposure=["BPA10ug"]&Tissue=["Cortex"]&Age=["20 weeks"]&Sex=["Male"]'
+                    '/explore?Assay=["microarray"]&Exposure=["BPA10ug"]&Tissue=["Cortex"]&Age=["20 weeks"]&Sex=["Male"]'
                   )
                 }
               >
@@ -765,7 +849,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Assay=["microarray"]&Exposure=["BPA10mg"]&Tissue=["Cortex"]&Age=["20 weeks"]&Sex=["Male"]'
+                    '/explore?Assay=["microarray"]&Exposure=["BPA10mg"]&Tissue=["Cortex"]&Age=["20 weeks"]&Sex=["Male"]'
                   )
                 }
               >
@@ -925,7 +1009,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Assay=["ChIP"]&Exposure=["Control"]&Marker=["H3K4me1"]&Tissue=["Liver"]&Age=["5 weeks"]&Sex=["Male"]'
+                    '/explore?Assay=["ChIP"]&Exposure=["Control"]&Marker=["H3K4me1"]&Tissue=["Liver"]&Age=["5 weeks"]&Sex=["Male"]'
                   )
                 }
               >
@@ -935,7 +1019,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Assay=["ChIP"]&Exposure=["TCDD"]&Marker=["H3K4me1"]&Tissue=["Liver"]&Age=["5 weeks"]&Sex=["Male"]'
+                    '/explore?Assay=["ChIP"]&Exposure=["TCDD"]&Marker=["H3K4me1"]&Tissue=["Liver"]&Age=["5 weeks"]&Sex=["Male"]'
                   )
                 }
               >
@@ -983,7 +1067,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Assay=["ChIP"]&Exposure=["Control"]&Marker=["H3K4me3"]&Tissue=["Liver"]&Age=["5 weeks"]&Sex=["Male"]'
+                    '/explore?Assay=["ChIP"]&Exposure=["Control"]&Marker=["H3K4me3"]&Tissue=["Liver"]&Age=["5 weeks"]&Sex=["Male"]'
                   )
                 }
               >
@@ -993,7 +1077,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Assay=["ChIP"]&Exposure=["TCDD"]&Marker=["H3K4me3"]&Tissue=["Liver"]&Age=["5 weeks"]&Sex=["Male"]'
+                    '/explore?Assay=["ChIP"]&Exposure=["TCDD"]&Marker=["H3K4me3"]&Tissue=["Liver"]&Age=["5 weeks"]&Sex=["Male"]'
                   )
                 }
               >
@@ -1041,7 +1125,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Assay=["ChIP"]&Exposure=["Control"]&Marker=["H3K27ac"]&Tissue=["Liver"]&Age=["5 weeks"]&Sex=["Male"]'
+                    '/explore?Assay=["ChIP"]&Exposure=["Control"]&Marker=["H3K27ac"]&Tissue=["Liver"]&Age=["5 weeks"]&Sex=["Male"]'
                   )
                 }
               >
@@ -1051,7 +1135,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Assay=["ChIP"]&Exposure=["TCDD"]&Marker=["H3K27ac"]&Tissue=["Liver"]&Age=["5 weeks"]&Sex=["Male"]'
+                    '/explore?Assay=["ChIP"]&Exposure=["TCDD"]&Marker=["H3K27ac"]&Tissue=["Liver"]&Age=["5 weeks"]&Sex=["Male"]'
                   )
                 }
               >
@@ -1092,7 +1176,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Lab=["Biswal"]&Exposure=["Control"]&Marker=["H3K4me1"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Female"]'
+                    '/explore?Lab=["Biswal"]&Exposure=["Control"]&Marker=["H3K4me1"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Female"]'
                   )
                 }
               >
@@ -1102,7 +1186,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Assay=["ChIP"]&Exposure=["PM2.5-JHU"]&Marker=["H3K4me1"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Female"]'
+                    '/explore?Assay=["ChIP"]&Exposure=["PM2.5-JHU"]&Marker=["H3K4me1"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Female"]'
                   )
                 }
               >
@@ -1112,7 +1196,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Lab=["Dolinoy"]&Exposure=["Control"]&Marker=["H3K4me1"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Female"]'
+                    '/explore?Lab=["Dolinoy"]&Exposure=["Control"]&Marker=["H3K4me1"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Female"]'
                   )
                 }
               >
@@ -1122,7 +1206,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Assay=["ChIP"]&Exposure=["DEHP"]&Marker=["H3K4me1"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Female"]'
+                    '/explore?Assay=["ChIP"]&Exposure=["DEHP"]&Marker=["H3K4me1"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Female"]'
                   )
                 }
               >
@@ -1132,7 +1216,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Assay=["ChIP"]&Exposure=["Lead"]&Marker=["H3K4me1"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Female"]'
+                    '/explore?Assay=["ChIP"]&Exposure=["Lead"]&Marker=["H3K4me1"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Female"]'
                   )
                 }
               >
@@ -1142,7 +1226,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Lab=["Mutlu"]&Exposure=["Control"]&Marker=["H3K4me1"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Female"]'
+                    '/explore?Lab=["Mutlu"]&Exposure=["Control"]&Marker=["H3K4me1"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Female"]'
                   )
                 }
               >
@@ -1152,7 +1236,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Lab=["Mutlu"]&Exposure=["PM2.5-CHI"]&Marker=["H3K4me1"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Female"]'
+                    '/explore?Lab=["Mutlu"]&Exposure=["PM2.5-CHI"]&Marker=["H3K4me1"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Female"]'
                   )
                 }
               >
@@ -1168,7 +1252,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Lab=["Aylor"]&Exposure=["Control"]&Marker=["H3K4me1"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
+                    '/explore?Lab=["Aylor"]&Exposure=["Control"]&Marker=["H3K4me1"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
                   )
                 }
               >
@@ -1178,7 +1262,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Lab=["Aylor"]&Exposure=["TCDD"]&Marker=["H3K4me1"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
+                    '/explore?Lab=["Aylor"]&Exposure=["TCDD"]&Marker=["H3K4me1"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
                   )
                 }
               >
@@ -1188,7 +1272,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Lab=["Bartolomei"]&Exposure=["Control"]&Marker=["H3K4me1"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
+                    '/explore?Lab=["Bartolomei"]&Exposure=["Control"]&Marker=["H3K4me1"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
                   )
                 }
               >
@@ -1198,7 +1282,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Lab=["Bartolomei"]&Exposure=["BPA10mg"]&Marker=["H3K4me1"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
+                    '/explore?Lab=["Bartolomei"]&Exposure=["BPA10mg"]&Marker=["H3K4me1"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
                   )
                 }
               >
@@ -1208,7 +1292,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Lab=["Bartolomei"]&Exposure=["BPA10ug"]&Marker=["H3K4me1"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
+                    '/explore?Lab=["Bartolomei"]&Exposure=["BPA10ug"]&Marker=["H3K4me1"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
                   )
                 }
               >
@@ -1218,7 +1302,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Lab=["Biswal"]&Exposure=["Control"]&Marker=["H3K4me1"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
+                    '/explore?Lab=["Biswal"]&Exposure=["Control"]&Marker=["H3K4me1"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
                   )
                 }
               >
@@ -1228,7 +1312,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Lab=["Biswal"]&Exposure=["PM2.5-JHU"]&Marker=["H3K4me1"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
+                    '/explore?Lab=["Biswal"]&Exposure=["PM2.5-JHU"]&Marker=["H3K4me1"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
                   )
                 }
               >
@@ -1238,7 +1322,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Lab=["Dolinoy"]&Exposure=["Control"]&Marker=["H3K4me1"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
+                    '/explore?Lab=["Dolinoy"]&Exposure=["Control"]&Marker=["H3K4me1"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
                   )
                 }
               >
@@ -1248,7 +1332,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Lab=["Dolinoy"]&Exposure=["DEHP"]&Marker=["H3K4me1"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
+                    '/explore?Lab=["Dolinoy"]&Exposure=["DEHP"]&Marker=["H3K4me1"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
                   )
                 }
               >
@@ -1258,7 +1342,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Lab=["Dolinoy"]&Exposure=["Lead"]&Marker=["H3K4me1"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
+                    '/explore?Lab=["Dolinoy"]&Exposure=["Lead"]&Marker=["H3K4me1"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
                   )
                 }
               >
@@ -1268,7 +1352,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Lab=["Mutlu"]&Exposure=["Control"]&Marker=["H3K4me1"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
+                    '/explore?Lab=["Mutlu"]&Exposure=["Control"]&Marker=["H3K4me1"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
                   )
                 }
               >
@@ -1278,7 +1362,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Lab=["Mutlu"]&Exposure=["PM2.5-CHI"]&Marker=["H3K4me1"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
+                    '/explore?Lab=["Mutlu"]&Exposure=["PM2.5-CHI"]&Marker=["H3K4me1"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
                   )
                 }
               >
@@ -1288,7 +1372,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Lab=["Walker"]&Exposure=["Control"]&Marker=["H3K4me1"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
+                    '/explore?Lab=["Walker"]&Exposure=["Control"]&Marker=["H3K4me1"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
                   )
                 }
               >
@@ -1298,7 +1382,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Lab=["Walker"]&Exposure=["TBT"]&Marker=["H3K4me1"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
+                    '/explore?Lab=["Walker"]&Exposure=["TBT"]&Marker=["H3K4me1"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
                   )
                 }
               >
@@ -1321,7 +1405,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Lab=["Biswal"]&Exposure=["Control"]&Marker=["H3K4me3"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Female"]'
+                    '/explore?Lab=["Biswal"]&Exposure=["Control"]&Marker=["H3K4me3"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Female"]'
                   )
                 }
               >
@@ -1331,7 +1415,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Lab=["Biswal"]&Exposure=["PM2.5-JHU"]&Marker=["H3K4me3"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Female"]'
+                    '/explore?Lab=["Biswal"]&Exposure=["PM2.5-JHU"]&Marker=["H3K4me3"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Female"]'
                   )
                 }
               >
@@ -1341,7 +1425,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Lab=["Dolinoy"]&Exposure=["Control"]&Marker=["H3K4me3"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Female"]'
+                    '/explore?Lab=["Dolinoy"]&Exposure=["Control"]&Marker=["H3K4me3"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Female"]'
                   )
                 }
               >
@@ -1351,7 +1435,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Lab=["Dolinoy"]&Exposure=["DEHP"]&Marker=["H3K4me3"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Female"]'
+                    '/explore?Lab=["Dolinoy"]&Exposure=["DEHP"]&Marker=["H3K4me3"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Female"]'
                   )
                 }
               >
@@ -1361,7 +1445,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Lab=["Dolinoy"]&Exposure=["Lead"]&Marker=["H3K4me3"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Female"]'
+                    '/explore?Lab=["Dolinoy"]&Exposure=["Lead"]&Marker=["H3K4me3"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Female"]'
                   )
                 }
               >
@@ -1371,7 +1455,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Lab=["Mutlu"]&Exposure=["Control"]&Marker=["H3K4me3"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Female"]'
+                    '/explore?Lab=["Mutlu"]&Exposure=["Control"]&Marker=["H3K4me3"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Female"]'
                   )
                 }
               >
@@ -1381,7 +1465,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Lab=["Mutlu"]&Exposure=["PM2.5-CHI"]&Marker=["H3K4me3"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Female"]'
+                    '/explore?Lab=["Mutlu"]&Exposure=["PM2.5-CHI"]&Marker=["H3K4me3"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Female"]'
                   )
                 }
               >
@@ -1397,7 +1481,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Lab=["Aylor"]&Exposure=["Control"]&Marker=["H3K4me3"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
+                    '/explore?Lab=["Aylor"]&Exposure=["Control"]&Marker=["H3K4me3"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
                   )
                 }
               >
@@ -1407,7 +1491,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Lab=["Aylor"]&Exposure=["TCDD"]&Marker=["H3K4me3"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
+                    '/explore?Lab=["Aylor"]&Exposure=["TCDD"]&Marker=["H3K4me3"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
                   )
                 }
               >
@@ -1417,7 +1501,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Lab=["Bartolomei"]&Exposure=["Control"]&Marker=["H3K4me3"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
+                    '/explore?Lab=["Bartolomei"]&Exposure=["Control"]&Marker=["H3K4me3"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
                   )
                 }
               >
@@ -1427,7 +1511,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Lab=["Bartolomei"]&Exposure=["BPA10mg"]&Marker=["H3K4me3"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
+                    '/explore?Lab=["Bartolomei"]&Exposure=["BPA10mg"]&Marker=["H3K4me3"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
                   )
                 }
               >
@@ -1437,7 +1521,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Lab=["Bartolomei"]&Exposure=["BPA10ug"]&Marker=["H3K4me3"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
+                    '/explore?Lab=["Bartolomei"]&Exposure=["BPA10ug"]&Marker=["H3K4me3"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
                   )
                 }
               >
@@ -1447,7 +1531,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Lab=["Biswal"]&Exposure=["Control"]&Marker=["H3K4me3"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
+                    '/explore?Lab=["Biswal"]&Exposure=["Control"]&Marker=["H3K4me3"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
                   )
                 }
               >
@@ -1457,7 +1541,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Lab=["Biswal"]&Exposure=["PM2.5-JHU"]&Marker=["H3K4me3"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
+                    '/explore?Lab=["Biswal"]&Exposure=["PM2.5-JHU"]&Marker=["H3K4me3"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
                   )
                 }
               >
@@ -1467,7 +1551,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Lab=["Dolinoy"]&Exposure=["Control"]&Marker=["H3K4me3"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
+                    '/explore?Lab=["Dolinoy"]&Exposure=["Control"]&Marker=["H3K4me3"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
                   )
                 }
               >
@@ -1477,7 +1561,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Lab=["Dolinoy"]&Exposure=["DEHP"]&Marker=["H3K4me3"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
+                    '/explore?Lab=["Dolinoy"]&Exposure=["DEHP"]&Marker=["H3K4me3"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
                   )
                 }
               >
@@ -1487,7 +1571,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Lab=["Dolinoy"]&Exposure=["Lead"]&Marker=["H3K4me3"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
+                    '/explore?Lab=["Dolinoy"]&Exposure=["Lead"]&Marker=["H3K4me3"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
                   )
                 }
               >
@@ -1497,7 +1581,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Lab=["Mutlu"]&Exposure=["Control"]&Marker=["H3K4me3"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
+                    '/explore?Lab=["Mutlu"]&Exposure=["Control"]&Marker=["H3K4me3"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
                   )
                 }
               >
@@ -1507,7 +1591,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Lab=["Mutlu"]&Exposure=["PM2.5-CHI"]&Marker=["H3K4me3"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
+                    '/explore?Lab=["Mutlu"]&Exposure=["PM2.5-CHI"]&Marker=["H3K4me3"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
                   )
                 }
               >
@@ -1517,7 +1601,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Lab=["Walker"]&Exposure=["Control"]&Marker=["H3K4me3"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
+                    '/explore?Lab=["Walker"]&Exposure=["Control"]&Marker=["H3K4me3"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
                   )
                 }
               >
@@ -1527,7 +1611,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Lab=["Walker"]&Exposure=["TBT"]&Marker=["H3K4me3"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
+                    '/explore?Lab=["Walker"]&Exposure=["TBT"]&Marker=["H3K4me3"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
                   )
                 }
               >
@@ -1550,7 +1634,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Lab=["Biswal"]&Exposure=["Control"]&Marker=["H3K27ac"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Female"]'
+                    '/explore?Lab=["Biswal"]&Exposure=["Control"]&Marker=["H3K27ac"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Female"]'
                   )
                 }
               >
@@ -1560,7 +1644,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Lab=["Biswal"]&Exposure=["PM2.5-JHU"]&Marker=["H3K27ac"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Female"]'
+                    '/explore?Lab=["Biswal"]&Exposure=["PM2.5-JHU"]&Marker=["H3K27ac"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Female"]'
                   )
                 }
               >
@@ -1570,7 +1654,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Lab=["Dolinoy"]&Exposure=["Control"]&Marker=["H3K27ac"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Female"]'
+                    '/explore?Lab=["Dolinoy"]&Exposure=["Control"]&Marker=["H3K27ac"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Female"]'
                   )
                 }
               >
@@ -1580,7 +1664,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Lab=["Dolinoy"]&Exposure=["DEHP"]&Marker=["H3K27ac"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Female"]'
+                    '/explore?Lab=["Dolinoy"]&Exposure=["DEHP"]&Marker=["H3K27ac"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Female"]'
                   )
                 }
               >
@@ -1590,7 +1674,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Lab=["Dolinoy"]&Exposure=["Lead"]&Marker=["H3K27ac"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Female"]'
+                    '/explore?Lab=["Dolinoy"]&Exposure=["Lead"]&Marker=["H3K27ac"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Female"]'
                   )
                 }
               >
@@ -1600,7 +1684,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Lab=["Mutlu"]&Exposure=["Control"]&Marker=["H3K27ac"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Female"]'
+                    '/explore?Lab=["Mutlu"]&Exposure=["Control"]&Marker=["H3K27ac"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Female"]'
                   )
                 }
               >
@@ -1610,7 +1694,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Lab=["Mutlu"]&Exposure=["PM2.5-CHI"]&Marker=["H3K27ac"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Female"]'
+                    '/explore?Lab=["Mutlu"]&Exposure=["PM2.5-CHI"]&Marker=["H3K27ac"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Female"]'
                   )
                 }
               >
@@ -1626,7 +1710,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Lab=["Aylor"]&Exposure=["Control"]&Marker=["H3K27ac"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
+                    '/explore?Lab=["Aylor"]&Exposure=["Control"]&Marker=["H3K27ac"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
                   )
                 }
               >
@@ -1636,7 +1720,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Lab=["Aylor"]&Exposure=["TCDD"]&Marker=["H3K27ac"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
+                    '/explore?Lab=["Aylor"]&Exposure=["TCDD"]&Marker=["H3K27ac"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
                   )
                 }
               >
@@ -1646,7 +1730,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Lab=["Bartolomei"]&Exposure=["Control"]&Marker=["H3K27ac"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
+                    '/explore?Lab=["Bartolomei"]&Exposure=["Control"]&Marker=["H3K27ac"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
                   )
                 }
               >
@@ -1656,7 +1740,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Lab=["Bartolomei"]&Exposure=["BPA10mg"]&Marker=["H3K27ac"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
+                    '/explore?Lab=["Bartolomei"]&Exposure=["BPA10mg"]&Marker=["H3K27ac"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
                   )
                 }
               >
@@ -1666,7 +1750,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Lab=["Bartolomei"]&Exposure=["BPA10ug"]&Marker=["H3K27ac"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
+                    '/explore?Lab=["Bartolomei"]&Exposure=["BPA10ug"]&Marker=["H3K27ac"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
                   )
                 }
               >
@@ -1676,7 +1760,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Lab=["Biswal"]&Exposure=["Control"]&Marker=["H3K27ac"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
+                    '/explore?Lab=["Biswal"]&Exposure=["Control"]&Marker=["H3K27ac"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
                   )
                 }
               >
@@ -1686,7 +1770,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Lab=["Biswal"]&Exposure=["PM2.5-JHU"]&Marker=["H3K27ac"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
+                    '/explore?Lab=["Biswal"]&Exposure=["PM2.5-JHU"]&Marker=["H3K27ac"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
                   )
                 }
               >
@@ -1696,7 +1780,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Lab=["Dolinoy"]&Exposure=["Control"]&Marker=["H3K27ac"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
+                    '/explore?Lab=["Dolinoy"]&Exposure=["Control"]&Marker=["H3K27ac"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
                   )
                 }
               >
@@ -1706,7 +1790,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Lab=["Dolinoy"]&Exposure=["DEHP"]&Marker=["H3K27ac"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
+                    '/explore?Lab=["Dolinoy"]&Exposure=["DEHP"]&Marker=["H3K27ac"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
                   )
                 }
               >
@@ -1716,7 +1800,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Lab=["Dolinoy"]&Exposure=["Lead"]&Marker=["H3K27ac"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
+                    '/explore?Lab=["Dolinoy"]&Exposure=["Lead"]&Marker=["H3K27ac"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
                   )
                 }
               >
@@ -1726,7 +1810,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Lab=["Mutlu"]&Exposure=["Control"]&Marker=["H3K27ac"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
+                    '/explore?Lab=["Mutlu"]&Exposure=["Control"]&Marker=["H3K27ac"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
                   )
                 }
               >
@@ -1736,7 +1820,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Lab=["Mutlu"]&Exposure=["PM2.5-CHI"]&Marker=["H3K27ac"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
+                    '/explore?Lab=["Mutlu"]&Exposure=["PM2.5-CHI"]&Marker=["H3K27ac"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
                   )
                 }
               >
@@ -1746,7 +1830,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Lab=["Walker"]&Exposure=["Control"]&Marker=["H3K27ac"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
+                    '/explore?Lab=["Walker"]&Exposure=["Control"]&Marker=["H3K27ac"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
                   )
                 }
               >
@@ -1756,7 +1840,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Lab=["Walker"]&Exposure=["TBT"]&Marker=["H3K27ac"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
+                    '/explore?Lab=["Walker"]&Exposure=["TBT"]&Marker=["H3K27ac"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
                   )
                 }
               >
@@ -1797,7 +1881,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Lab=["Aylor"]&Exposure=["Control"]&Marker=["H3K4me1"]&Tissue=["Liver"]&Age=["40 weeks"]&Sex=["Male"]'
+                    '/explore?Lab=["Aylor"]&Exposure=["Control"]&Marker=["H3K4me1"]&Tissue=["Liver"]&Age=["40 weeks"]&Sex=["Male"]'
                   )
                 }
               >
@@ -1807,7 +1891,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Lab=["Aylor"]&Exposure=["TCDD"]&Marker=["H3K4me1"]&Tissue=["Liver"]&Age=["40 weeks"]&Sex=["Male"]'
+                    '/explore?Lab=["Aylor"]&Exposure=["TCDD"]&Marker=["H3K4me1"]&Tissue=["Liver"]&Age=["40 weeks"]&Sex=["Male"]'
                   )
                 }
               >
@@ -1855,7 +1939,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Lab=["Aylor"]&Exposure=["Control"]&Marker=["H3K4me3"]&Tissue=["Liver"]&Age=["40 weeks"]&Sex=["Male"]'
+                    '/explore?Lab=["Aylor"]&Exposure=["Control"]&Marker=["H3K4me3"]&Tissue=["Liver"]&Age=["40 weeks"]&Sex=["Male"]'
                   )
                 }
               >
@@ -1865,7 +1949,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Lab=["Aylor"]&Exposure=["TCDD"]&Marker=["H3K4me3"]&Tissue=["Liver"]&Age=["40 weeks"]&Sex=["Male"]'
+                    '/explore?Lab=["Aylor"]&Exposure=["TCDD"]&Marker=["H3K4me3"]&Tissue=["Liver"]&Age=["40 weeks"]&Sex=["Male"]'
                   )
                 }
               >
@@ -1913,7 +1997,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Lab=["Aylor"]&Exposure=["Control"]&Marker=["H3K27ac"]&Tissue=["Liver"]&Age=["40 weeks"]&Sex=["Male"]'
+                    '/explore?Lab=["Aylor"]&Exposure=["Control"]&Marker=["H3K27ac"]&Tissue=["Liver"]&Age=["40 weeks"]&Sex=["Male"]'
                   )
                 }
               >
@@ -1923,7 +2007,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Lab=["Aylor"]&Exposure=["TCDD"]&Marker=["H3K27ac"]&Tissue=["Liver"]&Age=["40 weeks"]&Sex=["Male"]'
+                    '/explore?Lab=["Aylor"]&Exposure=["TCDD"]&Marker=["H3K27ac"]&Tissue=["Liver"]&Age=["40 weeks"]&Sex=["Male"]'
                   )
                 }
               >
@@ -2092,7 +2176,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Lab=["Walker"]&Exposure=["Control"]&Marker=["H3K9me3"]&Tissue=["Liver"]&Age=["3 weeks"]&Sex=["Female"]'
+                    '/explore?Lab=["Walker"]&Exposure=["Control"]&Marker=["H3K9me3"]&Tissue=["Liver"]&Age=["3 weeks"]&Sex=["Female"]'
                   )
                 }
               >
@@ -2102,7 +2186,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Lab=["Walker"]&Exposure=["TBT"]&Marker=["H3K9me3"]&Tissue=["Liver"]&Age=["3 weeks"]&Sex=["Female"]'
+                    '/explore?Lab=["Walker"]&Exposure=["TBT"]&Marker=["H3K9me3"]&Tissue=["Liver"]&Age=["3 weeks"]&Sex=["Female"]'
                   )
                 }
               >
@@ -2128,7 +2212,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Lab=["Walker"]&Exposure=["Control"]&Marker=["H3K9me3"]&Tissue=["Liver"]&Age=["3 weeks"]&Sex=["Male"]'
+                    '/explore?Lab=["Walker"]&Exposure=["Control"]&Marker=["H3K9me3"]&Tissue=["Liver"]&Age=["3 weeks"]&Sex=["Male"]'
                   )
                 }
               >
@@ -2138,7 +2222,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Lab=["Walker"]&Exposure=["TBT"]&Marker=["H3K9me3"]&Tissue=["Liver"]&Age=["3 weeks"]&Sex=["Male"]'
+                    '/explore?Lab=["Walker"]&Exposure=["TBT"]&Marker=["H3K9me3"]&Tissue=["Liver"]&Age=["3 weeks"]&Sex=["Male"]'
                   )
                 }
               >
@@ -2171,7 +2255,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Lab=["Walker"]&Exposure=["Control"]&Marker=["H3K27me3"]&Tissue=["Liver"]&Age=["3 weeks"]&Sex=["Female"]'
+                    '/explore?Lab=["Walker"]&Exposure=["Control"]&Marker=["H3K27me3"]&Tissue=["Liver"]&Age=["3 weeks"]&Sex=["Female"]'
                   )
                 }
               >
@@ -2181,7 +2265,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Lab=["Walker"]&Exposure=["TBT"]&Marker=["H3K27me3"]&Tissue=["Liver"]&Age=["3 weeks"]&Sex=["Female"]'
+                    '/explore?Lab=["Walker"]&Exposure=["TBT"]&Marker=["H3K27me3"]&Tissue=["Liver"]&Age=["3 weeks"]&Sex=["Female"]'
                   )
                 }
               >
@@ -2207,7 +2291,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Lab=["Walker"]&Exposure=["Control"]&Marker=["H3K27me3"]&Tissue=["Liver"]&Age=["3 weeks"]&Sex=["Male"]'
+                    '/explore?Lab=["Walker"]&Exposure=["Control"]&Marker=["H3K27me3"]&Tissue=["Liver"]&Age=["3 weeks"]&Sex=["Male"]'
                   )
                 }
               >
@@ -2217,7 +2301,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Lab=["Walker"]&Exposure=["TBT"]&Marker=["H3K27me3"]&Tissue=["Liver"]&Age=["3 weeks"]&Sex=["Male"]'
+                    '/explore?Lab=["Walker"]&Exposure=["TBT"]&Marker=["H3K27me3"]&Tissue=["Liver"]&Age=["3 weeks"]&Sex=["Male"]'
                   )
                 }
               >
@@ -2261,7 +2345,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Lab=["Aylor"]&Exposure=["Control"]&Marker=["H3K9me3"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
+                    '/explore?Lab=["Aylor"]&Exposure=["Control"]&Marker=["H3K9me3"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
                   )
                 }
               >
@@ -2271,7 +2355,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Lab=["Aylor"]&Exposure=["TCDD"]&Marker=["H3K9me3"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
+                    '/explore?Lab=["Aylor"]&Exposure=["TCDD"]&Marker=["H3K9me3"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
                   )
                 }
               >
@@ -2281,7 +2365,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Lab=["Bartolomei"]&Exposure=["Control"]&Marker=["H3K9me3"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
+                    '/explore?Lab=["Bartolomei"]&Exposure=["Control"]&Marker=["H3K9me3"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
                   )
                 }
               >
@@ -2291,7 +2375,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Lab=["Bartolomei"]&Exposure=["BPA10mg"]&Marker=["H3K9me3"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
+                    '/explore?Lab=["Bartolomei"]&Exposure=["BPA10mg"]&Marker=["H3K9me3"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
                   )
                 }
               >
@@ -2301,7 +2385,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Lab=["Bartolomei"]&Exposure=["BPA10ug"]&Marker=["H3K9me3"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
+                    '/explore?Lab=["Bartolomei"]&Exposure=["BPA10ug"]&Marker=["H3K9me3"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
                   )
                 }
               >
@@ -2311,7 +2395,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Lab=["Biswal"]&Exposure=["Control"]&Marker=["H3K9me3"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
+                    '/explore?Lab=["Biswal"]&Exposure=["Control"]&Marker=["H3K9me3"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
                   )
                 }
               >
@@ -2321,7 +2405,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Lab=["Biswal"]&Exposure=["PM2.5-JHU"]&Marker=["H3K9me3"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
+                    '/explore?Lab=["Biswal"]&Exposure=["PM2.5-JHU"]&Marker=["H3K9me3"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
                   )
                 }
               >
@@ -2331,7 +2415,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Lab=["Dolinoy"]&Exposure=["Control"]&Marker=["H3K9me3"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
+                    '/explore?Lab=["Dolinoy"]&Exposure=["Control"]&Marker=["H3K9me3"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
                   )
                 }
               >
@@ -2341,7 +2425,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Lab=["Dolinoy"]&Exposure=["DEHP"]&Marker=["H3K9me3"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
+                    '/explore?Lab=["Dolinoy"]&Exposure=["DEHP"]&Marker=["H3K9me3"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
                   )
                 }
               >
@@ -2351,7 +2435,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Lab=["Dolinoy"]&Exposure=["Lead"]&Marker=["H3K9me3"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
+                    '/explore?Lab=["Dolinoy"]&Exposure=["Lead"]&Marker=["H3K9me3"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
                   )
                 }
               >
@@ -2361,7 +2445,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Lab=["Mutlu"]&Exposure=["Control"]&Marker=["H3K9me3"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
+                    '/explore?Lab=["Mutlu"]&Exposure=["Control"]&Marker=["H3K9me3"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
                   )
                 }
               >
@@ -2371,7 +2455,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Lab=["Mutlu"]&Exposure=["PM2.5-CHI"]&Marker=["H3K9me3"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
+                    '/explore?Lab=["Mutlu"]&Exposure=["PM2.5-CHI"]&Marker=["H3K9me3"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
                   )
                 }
               >
@@ -2381,7 +2465,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Lab=["Walker"]&Exposure=["Control"]&Marker=["H3K9me3"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
+                    '/explore?Lab=["Walker"]&Exposure=["Control"]&Marker=["H3K9me3"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
                   )
                 }
               >
@@ -2391,7 +2475,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Lab=["Walker"]&Exposure=["TBT"]&Marker=["H3K9me3"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
+                    '/explore?Lab=["Walker"]&Exposure=["TBT"]&Marker=["H3K9me3"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
                   )
                 }
               >
@@ -2430,7 +2514,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Lab=["Aylor"]&Exposure=["Control"]&Marker=["H3K27me3"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
+                    '/explore?Lab=["Aylor"]&Exposure=["Control"]&Marker=["H3K27me3"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
                   )
                 }
               >
@@ -2440,7 +2524,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Lab=["Aylor"]&Exposure=["TCDD"]&Marker=["H3K27me3"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
+                    '/explore?Lab=["Aylor"]&Exposure=["TCDD"]&Marker=["H3K27me3"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
                   )
                 }
               >
@@ -2450,7 +2534,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Lab=["Bartolomei"]&Exposure=["Control"]&Marker=["H3K27me3"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
+                    '/explore?Lab=["Bartolomei"]&Exposure=["Control"]&Marker=["H3K27me3"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
                   )
                 }
               >
@@ -2460,7 +2544,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Lab=["Bartolomei"]&Exposure=["BPA10mg"]&Marker=["H3K27me3"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
+                    '/explore?Lab=["Bartolomei"]&Exposure=["BPA10mg"]&Marker=["H3K27me3"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
                   )
                 }
               >
@@ -2470,7 +2554,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Lab=["Bartolomei"]&Exposure=["BPA10ug"]&Marker=["H3K27me3"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
+                    '/explore?Lab=["Bartolomei"]&Exposure=["BPA10ug"]&Marker=["H3K27me3"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
                   )
                 }
               >
@@ -2480,7 +2564,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Lab=["Biswal"]&Exposure=["Control"]&Marker=["H3K27me3"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
+                    '/explore?Lab=["Biswal"]&Exposure=["Control"]&Marker=["H3K27me3"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
                   )
                 }
               >
@@ -2491,7 +2575,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Lab=["Dolinoy"]&Exposure=["Control"]&Marker=["H3K27me3"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
+                    '/explore?Lab=["Dolinoy"]&Exposure=["Control"]&Marker=["H3K27me3"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
                   )
                 }
               >
@@ -2501,7 +2585,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Lab=["Dolinoy"]&Exposure=["DEHP"]&Marker=["H3K27me3"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
+                    '/explore?Lab=["Dolinoy"]&Exposure=["DEHP"]&Marker=["H3K27me3"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
                   )
                 }
               >
@@ -2511,7 +2595,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Lab=["Dolinoy"]&Exposure=["Lead"]&Marker=["H3K27me3"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
+                    '/explore?Lab=["Dolinoy"]&Exposure=["Lead"]&Marker=["H3K27me3"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
                   )
                 }
               >
@@ -2521,7 +2605,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Lab=["Mutlu"]&Exposure=["Control"]&Marker=["H3K27me3"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
+                    '/explore?Lab=["Mutlu"]&Exposure=["Control"]&Marker=["H3K27me3"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
                   )
                 }
               >
@@ -2531,7 +2615,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Lab=["Mutlu"]&Exposure=["PM2.5-CHI"]&Marker=["H3K27me3"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
+                    '/explore?Lab=["Mutlu"]&Exposure=["PM2.5-CHI"]&Marker=["H3K27me3"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
                   )
                 }
               >
@@ -2541,7 +2625,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Lab=["Walker"]&Exposure=["Control"]&Marker=["H3K27me3"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
+                    '/explore?Lab=["Walker"]&Exposure=["Control"]&Marker=["H3K27me3"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
                   )
                 }
               >
@@ -2551,7 +2635,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/?Lab=["Walker"]&Exposure=["TBT"]&Marker=["H3K27me3"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
+                    '/explore?Lab=["Walker"]&Exposure=["TBT"]&Marker=["H3K27me3"]&Tissue=["Liver"]&Age=["20 weeks"]&Sex=["Male"]'
                   )
                 }
               >

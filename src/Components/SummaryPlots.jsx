@@ -55,7 +55,7 @@ export default function SummaryPlots() {
                   {
                     /* console.log("props in plot", datum?.x); */
                   }
-                  handleClick(`/?Assay=${JSON.stringify([datum.x])}`);
+                  handleClick(`/explore?Assay=${JSON.stringify([datum.x])}`);
                 },
                 onMouseOver: () => {
                   return [
@@ -137,7 +137,7 @@ export default function SummaryPlots() {
                     {
                       /* console.log("props in plot", datum?.x); */
                     }
-                    handleClick(`/?Tissue=${JSON.stringify([datum.x])}`);
+                    handleClick(`/explore?Tissue=${JSON.stringify([datum.x])}`);
                   },
                   onMouseOver: () => {
                     return [
@@ -224,7 +224,7 @@ export default function SummaryPlots() {
                   {
                     /* console.log("props in plot", datum?.x); */
                   }
-                  handleClick(`/?Exposure=${JSON.stringify([datum.x])}`);
+                  handleClick(`/explore?Exposure=${JSON.stringify([datum.x])}`);
                 },
                 onMouseOver: () => {
                   return [

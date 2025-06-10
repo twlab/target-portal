@@ -5,7 +5,7 @@ import { useState } from "react";
 import { ReactiveBase } from "@appbaseio/reactivesearch";
 
 // Component imports
-import Home from "./Components/Home";
+import Explore from "./Components/Explore";
 import About from "./Components/About";
 import Experiment from "./Components/Experiment/ExperimentBase";
 
@@ -68,10 +68,10 @@ export default function App() {
             <Header />
             <main className="flex-1 flex flex-col items-center justify-betweem overflow-scroll bg-neutral-100">
               <Routes>
-                <Route path="/" element={<Home />} />
+                <Route path="/" element={<Summary />} />
                 <Route path="about" element={<About />} />
                 <Route path="methods" element={<Methods />} />
-                <Route path="summary" element={<Summary />} />
+                <Route path="explore" element={<Explore />} />
                 <Route path="downloads" element={<Downloads />} />
                 <Route path="experiment">
                   <Route path=":id" element={<Experiment />} />
