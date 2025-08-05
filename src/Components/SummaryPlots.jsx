@@ -41,11 +41,11 @@ export default function SummaryPlots() {
           }}
           data={[
             { x: "ATAC", y: 638 },
-            { x: "ChIP", y: 627 },
-            { x: "RNA", y: 998 },
+            { x: "ChIP", y: 659 },
+            { x: "RNA", y: 1025 },
             { x: "RRBS", y: 71 },
-            { x: "WGBS", y: 449 },
-            { x: "microarray", y: 308 },
+            { x: "WGBS", y: 458 },
+            { x: "microarray", y: 717 },
           ]}
           events={[
             {
@@ -121,11 +121,11 @@ export default function SummaryPlots() {
               data: { fill: "#be123c" },
             }}
             data={[
-              { x: "Blood", y: 929 },
-              { x: "Brain", y: 120 },
-              { x: "Cortex", y: 180 },
+              { x: "Blood", y: 960 },
+              { x: "Brain", y: 116 },
+              { x: "Cortex", y: 581 },
               { x: "Heart", y: 24 },
-              { x: "Liver", y: 1769 },
+              { x: "Liver", y: 1818 },
               { x: "Lung", y: 47 },
               { x: "Skin", y: 22 },
             ]}
@@ -205,16 +205,16 @@ export default function SummaryPlots() {
             },
           }}
           data={[
-            { x: "Arsenite", y: 95 },
-            { x: "DEHP", y: 210 },
-            { x: "PM2.5-CHI", y: 219 },
-            { x: "PM2.5-JHU", y: 170 },
-            { x: "BPA10ug", y: 189 },
-            { x: "BPA10mg", y: 193 },
-            { x: "Lead", y: 220 },
-            { x: "TBT", y: 254 },
-            { x: "TCDD", y: 215 },
-            { x: "Control", y: 1326 },
+            { x: "Arsenite", y: 100 },
+            { x: "DEHP", y: 252 },
+            { x: "PM2.5-CHI", y: 223 },
+            { x: "PM2.5-JHU", y: 203 },
+            { x: "BPA10ug", y: 209 },
+            { x: "BPA10mg", y: 224 },
+            { x: "Lead", y: 283 },
+            { x: "TBT", y: 307 },
+            { x: "TCDD", y: 241 },
+            { x: "Control", y: 1526 },
           ]}
           events={[
             {
