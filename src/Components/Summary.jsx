@@ -140,7 +140,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() => handleClick('/explore?Assay=["RNA"]')}
               >
-                1025
+                1042
               </td>
               <td
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
@@ -148,7 +148,7 @@ export default function Summary() {
                   handleClick('/explore?Assay=["RNA"]&Tissue=["Blood"]')
                 }
               >
-                401
+                406
               </td>
               <td
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
@@ -173,7 +173,7 @@ export default function Summary() {
                   handleClick('/explore?Assay=["RNA"]&Tissue=["Liver"]')
                 }
               >
-                519
+                531
               </td>
               <td
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
@@ -295,7 +295,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() => handleClick('/explore?Assay=["microarray"]')}
               >
-                717
+                744
               </td>
               <td
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
@@ -311,7 +311,7 @@ export default function Summary() {
                   handleClick('/explore?Assay=["microarray"]&Tissue=["Cortex"]')
                 }
               >
-                557
+                584
               </td>
               <td className="border border-slate-700 px-4 py-1"></td>
               <td className="border border-slate-700 px-4 py-1"></td>
@@ -390,7 +390,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() => handleClick('/explore?Assay=["RNA"]')}
               >
-                1025
+                1042
               </td>
               <td
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
@@ -398,7 +398,7 @@ export default function Summary() {
                   handleClick('/explore?Assay=["RNA"]&Age=["3 weeks"]')
                 }
               >
-                453
+                458
               </td>
               <td className="border border-slate-700 px-4 py-1"></td>
               <td
@@ -415,7 +415,7 @@ export default function Summary() {
                   handleClick('/explore?Assay=["RNA"]&Age=["40 weeks"]')
                 }
               >
-                122
+                134
               </td>
             </tr>
             <tr className="">
@@ -506,7 +506,7 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() => handleClick('/explore?Assay=["microarray"]')}
               >
-                717
+                744
               </td>
               <td className="border border-slate-700 px-4 py-1"></td>
               <td
@@ -523,7 +523,7 @@ export default function Summary() {
                   handleClick('/explore?Assay=["microarray"]&Age=["20 weeks"]')
                 }
               >
-                266
+                290
               </td>
               <td
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
@@ -531,7 +531,7 @@ export default function Summary() {
                   handleClick('/explore?Assay=["microarray"]&Age=["40 weeks"]')
                 }
               >
-                445
+                448
               </td>
             </tr>
           </tbody>
@@ -542,7 +542,7 @@ export default function Summary() {
 
       {/* Table with data for Illumina Mouse Array data. */}
       <p className="pb-2">
-        Summary of illumina microarray datasets (N = 717)
+        Summary of illumina microarray datasets (N = 744)
         <p className="text-sm">
           <em>
             <u>Click on highlighted cells to view experiments</u>
@@ -694,7 +694,16 @@ export default function Summary() {
                 2
               </td>
               <td className="border border-slate-700 px-4 py-1"></td>
-              <td className="border border-slate-700 px-4 py-1"></td>
+              <td
+                className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
+                onClick={() =>
+                  handleClick(
+                    '/explore?Assay=["microarray"]&Exposure=["TBT"]&Tissue=["Blood"]&Age=["40 weeks"]&Sex=["Male"]'
+                  )
+                }
+              >
+                16
+              </td>
               <td
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
@@ -717,7 +726,7 @@ export default function Summary() {
               </td>
             </tr>
             <tr>
-              <td className="border border-slate-700 px-4 py-1" rowSpan={5}>
+              <td className="border border-slate-700 px-4 py-1" rowSpan={7}>
                 Cortex
               </td>
             </tr>
@@ -764,7 +773,7 @@ export default function Summary() {
                   )
                 }
               >
-                11
+                12
               </td>
               <td
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
@@ -817,7 +826,7 @@ export default function Summary() {
                   )
                 }
               >
-                55
+                56
               </td>
               <td
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
@@ -887,7 +896,7 @@ export default function Summary() {
                   )
                 }
               >
-                11
+                12
               </td>
             </tr>
             <tr>
@@ -935,7 +944,16 @@ export default function Summary() {
               >
                 12
               </td>
-              <td className="border border-slate-700 px-4 py-1"></td>
+              <td
+                className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
+                onClick={() =>
+                  handleClick(
+                    '/explore?Assay=["microarray"]&Exposure=["PM2.5-JHU"]&Tissue=["Cortex"]&Age=["20 weeks"]&Sex=["Female"]'
+                  )
+                }
+              >
+                12
+              </td>
               <td
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
@@ -983,11 +1001,11 @@ export default function Summary() {
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
                 onClick={() =>
                   handleClick(
-                    '/explore?Assay=["microarray"]&Exposure=["Control"]&Tissue=["Cortex"]&Age=["20 weeks"]&Sex=["Male"]'
+                    '/explore?Assay=["microarray"]&Exposure=["DEHP"]&Tissue=["Cortex"]&Age=["20 weeks"]&Sex=["Male"]'
                   )
                 }
               >
-                2
+                14
               </td>
               <td
                 className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
@@ -1049,6 +1067,40 @@ export default function Summary() {
               >
                 14
               </td>
+            </tr>
+            <tr>
+              <td className="border border-slate-700 px-4 py-1" rowSpan={2}>
+                5 Weeks
+              </td>
+              <td className="border border-slate-700 px-4 py-1">Female</td>
+              <td
+                className="border border-slate-700 px-4 py-1 cursor-pointer bg-slate-200 hover:bg-blue-800 hover:text-white"
+                onClick={() =>
+                  handleClick(
+                    '/explore?Assay=["microarray"]&Exposure=["Control"]&Tissue=["Cortex"]&Age=["5 weeks"]&Sex=["Female"]'
+                  )
+                }
+              >
+                6
+              </td>
+              <td className="border border-slate-700 px-4 py-1"></td>
+              <td className="border border-slate-700 px-4 py-1"></td>
+              <td className="border border-slate-700 px-4 py-1"></td>
+              <td className="border border-slate-700 px-4 py-1"></td>
+              <td className="border border-slate-700 px-4 py-1"></td>
+              <td className="border border-slate-700 px-4 py-1"></td>
+              <td className="border border-slate-700 px-4 py-1"></td>
+            </tr>
+            <tr>
+              <td className="border border-slate-700 px-4 py-1">Male</td>
+              <td className="border border-slate-700 px-4 py-1"></td>
+              <td className="border border-slate-700 px-4 py-1"></td>
+              <td className="border border-slate-700 px-4 py-1"></td>
+              <td className="border border-slate-700 px-4 py-1"></td>
+              <td className="border border-slate-700 px-4 py-1"></td>
+              <td className="border border-slate-700 px-4 py-1"></td>
+              <td className="border border-slate-700 px-4 py-1"></td>
+              <td className="border border-slate-700 px-4 py-1"></td>
             </tr>
           </tbody>
         </table>
