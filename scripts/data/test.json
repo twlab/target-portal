@@ -1,0 +1,120 @@
+[
+  {
+    "experiment_id": "TGTEXP00A4WVT",
+    "internal_id": "TGT23",
+    "sex": "Male",
+    "exposure": "BPA10mg",
+    "tissue": "Liver",
+    "lab": "Bartolomei",
+    "assay": "ATAC",
+    "downloads": [
+      {
+        "filesize": "1562M",
+        "fileurl": "https://s3-obs1.htcf.wustl.edu/atac/0baf0fb4-2410-4d46-a1dd-e47fdfba091c/5c6362b15ffef25a6c53684b/5c6362b15ffef25a6c53684b.bam",
+        "filetype": "bam"
+      },
+      {
+        "filesize": "260M",
+        "fileurl": "https://s3-obs1.htcf.wustl.edu/atac/0baf0fb4-2410-4d46-a1dd-e47fdfba091c/5c6362b15ffef25a6c53684b/5c6362b15ffef25a6c53684b.bigWig",
+        "filetype": "bigWig"
+      },
+      {
+        "filesize": "9M",
+        "fileurl": "https://s3-obs1.htcf.wustl.edu/atac/0baf0fb4-2410-4d46-a1dd-e47fdfba091c/5c6362b15ffef25a6c53684b/5c6362b15ffef25a6c53684b.narrowPeak",
+        "filetype": "narrowPeak"
+      },
+      {
+        "filesize": "1137K",
+        "fileurl": "https://s3-obs1.htcf.wustl.edu/atac/0baf0fb4-2410-4d46-a1dd-e47fdfba091c/5c6362b15ffef25a6c53684b/multiqc_report.html",
+        "filetype": "multiqc_report.html"
+      },
+      {
+        "filesize": "239M",
+        "fileurl": "https://s3-obs1.htcf.wustl.edu/atac/0baf0fb4-2410-4d46-a1dd-e47fdfba091c/5c6362b15ffef25a6c53684b/step3.2_rmbl_5c6362b15ffef25a6c53684b.PE.R1.bigWig",
+        "filetype": "PE.R1.bigWig"
+      },
+      {
+        "filesize": "2G",
+        "fileurl": "https://s3-obs1.htcf.wustl.edu/atac/0baf0fb4-2410-4d46-a1dd-e47fdfba091c/5c6362b15ffef25a6c53684b/step3.3_rmbl_5c6362b15ffef25a6c53684b.PE.R1.open.bed",
+        "filetype": "PE.R1.open.bed"
+      },
+      {
+        "filesize": "10M",
+        "fileurl": "https://s3-obs1.htcf.wustl.edu/atac/0baf0fb4-2410-4d46-a1dd-e47fdfba091c/5c6362b15ffef25a6c53684b/step3.4_peakcall_5c6362b15ffef25a6c53684b.PE.R1_peaks.xls",
+        "filetype": "PE.R1_peaks.xls"
+      },
+      {
+        "filesize": "7M",
+        "fileurl": "https://s3-obs1.htcf.wustl.edu/atac/0baf0fb4-2410-4d46-a1dd-e47fdfba091c/5c6362b15ffef25a6c53684b/step3.4_peakcall_5c6362b15ffef25a6c53684b.PE.R1_summits.bed",
+        "filetype": "PE.R1_summits.bed"
+      },
+      {
+        "filesize": "136M",
+        "fileurl": "https://s3-obs1.htcf.wustl.edu/atac/0baf0fb4-2410-4d46-a1dd-e47fdfba091c/5c6362b15ffef25a6c53684b/step4.2_insertion_site_5c6362b15ffef25a6c53684b.PE.R1.bigWig",
+        "filetype": "PE.R1.bigWig"
+      }
+    ],
+    "exposure_dose": "10 MG/KGBW/DAY",
+    "exposure_paradigm": "Dams were exposed to treatment of 10 MG/KGBW/DAY BPA 2 weeks before breeding, through food/water. Offspring were exposed to treatment through the dam from conception to weaning.",
+    "strain": "C57BL/6J",
+    "marker": "",
+    "jsonURL": "https://s3-obs1.htcf.wustl.edu/atac/0baf0fb4-2410-4d46-a1dd-e47fdfba091c/5c6362b15ffef25a6c53684b/5c6362b15ffef25a6c53684b.json",
+    "affiliation": "University of Pennsylvania",
+    "exposure_name": "bisphenol A",
+    "age": "3 weeks"
+  },
+  {
+    "experiment_id": "TGTEXP01NLJOE",
+    "internal_id": "T111b",
+    "sex": "Male",
+    "exposure": "DEHP",
+    "tissue": "Liver",
+    "lab": "Dolinoy",
+    "assay": "RNA",
+    "downloads": [
+      {
+        "filesize": "82M",
+        "fileurl": "https://s3-obs1.htcf.wustl.edu/rna/cc94b443-8126-4f01-8f3d-8dc313643ba8/5c7207feb0e3511c710468f7/5c7207feb0e3511c710468f7.sbg.gz",
+        "filetype": "sbg.gz"
+      },
+      {
+        "filesize": "5M",
+        "fileurl": "https://s3-obs1.htcf.wustl.edu/rna/cc94b443-8126-4f01-8f3d-8dc313643ba8/5c7207feb0e3511c710468f7/5c7207feb0e3511c710468f7_Rsem.genes.fpkm.tsv",
+        "filetype": "Rsem.genes.fpkm.tsv"
+      },
+      {
+        "filesize": "9M",
+        "fileurl": "https://s3-obs1.htcf.wustl.edu/rna/cc94b443-8126-4f01-8f3d-8dc313643ba8/5c7207feb0e3511c710468f7/5c7207feb0e3511c710468f7_Rsem.isoforms.fpkm.tsv",
+        "filetype": "Rsem.isoforms.fpkm.tsv"
+      },
+      {
+        "filesize": "3G",
+        "fileurl": "https://s3-obs1.htcf.wustl.edu/rna/cc94b443-8126-4f01-8f3d-8dc313643ba8/5c7207feb0e3511c710468f7/5c7207feb0e3511c710468f7_Rsem.transcript.bam",
+        "filetype": "Rsem.transcript.bam"
+      },
+      {
+        "filesize": "2G",
+        "fileurl": "https://s3-obs1.htcf.wustl.edu/rna/cc94b443-8126-4f01-8f3d-8dc313643ba8/5c7207feb0e3511c710468f7/5c7207feb0e3511c710468f7_Star.bam",
+        "filetype": "Star.bam"
+      },
+      {
+        "filesize": "4G",
+        "fileurl": "https://s3-obs1.htcf.wustl.edu/rna/cc94b443-8126-4f01-8f3d-8dc313643ba8/5c7207feb0e3511c710468f7/5c7207feb0e3511c710468f7_Star.toTranscriptome.bam",
+        "filetype": "Star.toTranscriptome.bam"
+      },
+      {
+        "filesize": "1184K",
+        "fileurl": "https://s3-obs1.htcf.wustl.edu/rna/cc94b443-8126-4f01-8f3d-8dc313643ba8/5c7207feb0e3511c710468f7/multiqc_report.html",
+        "filetype": "multiqc_report.html"
+      }
+    ],
+    "exposure_dose": "25mg DEHP/kg",
+    "exposure_paradigm": "Dams were exposed to 25mg DEHP/kg in chow 2 weeks before preconception until weaning, thus offspring route of exposure was during gestation and lactation.",
+    "strain": "Avy",
+    "marker": "",
+    "jsonURL": "https://s3-obs1.htcf.wustl.edu/rna/cc94b443-8126-4f01-8f3d-8dc313643ba8/5c7207feb0e3511c710468f7/5c7207feb0e3511c710468f7.json",
+    "affiliation": "University of Michigan ",
+    "exposure_name": "di(2-ethylhexyl) phthalate",
+    "age": "3 weeks"
+  }
+]
